@@ -10,6 +10,7 @@ const Comment = mongoose.model("Comment");
 
 const connectedToDatabase = () => {
   const connection = process.env.MONGODB_URI || "mongodb://localhost:27017";
+  console.log({connection});
   mongoose.connect(connection);
   mongoose.set("debug", true);
 };
